@@ -1,0 +1,20 @@
+{
+  "name": "development-practice",
+  "version": "1.0.0",
+  "description": "Practical work to master:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --es-module-specifier-resolution=node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AudriusAnusauskas/development-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AudriusAnusauskas/development-practice/issues"
+  },
+  "homepage": "https://github.com/AudriusAnusauskas/development-practice#readme"
+}
