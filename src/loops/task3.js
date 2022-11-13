@@ -5,5 +5,5 @@ for(let i = 0; i < course.length; i++){
   if(course[i] === 'a'){
     countOfA ++;
   }
+  console.log(countOfA);
 }
-console.log(countOfA);
