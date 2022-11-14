@@ -1,9 +1,7 @@
 const fn = (...args) => {
   let spaces = 0;
   for (let arg of args) {
-    for (let i = 0; i < arg.length; i++) {
-      arg.charAt(i) === " " ? spaces++ : spaces;
-    }
+    arg.includes(" ") ? spaces++ : spaces;
   }
   console.log(spaces);
 };
