@@ -5,10 +5,9 @@ const human = {
   isDeveloper: false,
 };
 const printHuman = (obj) => {
+  let string = `${obj.firstName}  ${obj.lastName} (${obj.age}) is not a developer`;
   obj.isDeveloper === true
-    ? console.log(`${obj.firstName}  ${obj.lastName} (${obj.age}) is developer`)
-    : console.log(
-        `${obj.firstName}  ${obj.lastName} (${obj.age}) is not a developer`
-      );
+    ? console.log(string.replace("not a", ""))
+    : console.log(string);
 };
 printHuman(human);
