@@ -1,8 +1,6 @@
 const fn2 = (...args) => {
   let spaces = args.reduce((accumulator, currentValue) => {
-    return currentValue.includes(" ")
-      ? accumulator + currentValue.indexOf()
-      : accumulator;
+    return currentValue.includes(" ") ? accumulator + 1 : accumulator;
   }, 0);
   console.log(spaces);
 };
