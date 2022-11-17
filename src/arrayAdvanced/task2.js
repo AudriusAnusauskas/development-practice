@@ -1,9 +1,9 @@
 let fn = (arrObj, arrIds) => {
   for (let j = 0; j < arrIds.length; j++) {
     for (let i = 0; i < arrObj.length; i++) {
-      arrIds[j] === arrObj[i].id
-        ? arrObj.splice(arrObj.indexOf(arrObj[i]), 1)
-        : 0;
+      if (arrIds[j] === arrObj[i].id) {
+        arrObj.splice(arrObj.indexOf(arrObj[i]), 1);
+      }
     }
   }
   console.log(arrObj);
