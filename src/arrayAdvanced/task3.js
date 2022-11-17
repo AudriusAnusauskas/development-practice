@@ -5,7 +5,7 @@ const fn = (objArr) => {
       newArr.push(el.name);
     }
   });
-  console.log(newArr);
+  return newArr;
 };
 
 let peopleArr = [
@@ -15,4 +15,4 @@ let peopleArr = [
   { name: "Audrius", age: 34 },
 ];
 
-fn(peopleArr);
+console.log(fn(peopleArr));
