@@ -1,5 +1,7 @@
 let fn = (arr) => {
-  arr.sort();
+  arr.sort((a, b) => {
+    return a - b;
+  });
   console.log(arr[0]);
 };
 
@@ -11,3 +13,4 @@ for (let i = 0; i < newArray.length; i++) {
 
 console.log(newArray);
 fn(newArray);
+fn([10, 2, 3]);
