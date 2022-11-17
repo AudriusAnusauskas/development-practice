@@ -9,15 +9,22 @@ for (let i = 0; i < str.length; i++) {
 
 console.log(arr);
 
-let store = [];
 let primes = [];
-for (let i = 2; i <= str.length; ++i) {
-  if (!store[i]) {
-    primes.push(str[i]);
-    for (let j = i << 1; j <= str.length; j += i) {
-      store[j] = true;
+
+let isPrime = (num) => {
+  if (num == 2 || num == 3) return true;
+  if (num <= 1 || num % 2 == 0 || num % 3 == 0) return false;
+  for (let i = 5; i * i <= num; i += 6)
+    if (num % i == 0 || num % (i + 2) == 0) return false;
+  return true;
+};
+
+let pushPrime = (primeFn, str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (primeFn(i)) {
+      primes.push(str[i]);
     }
   }
-}
+};
+pushPrime(isPrime, str);
 console.log(primes);
-///googled the algorythm for primes and adapted to my task
