@@ -9,9 +9,9 @@ for (let i = 0; i < str.length; i++) {
 
 console.log(arr);
 
-let primes = [];
+const primes = [];
 
-let isPrime = (num) => {
+const isPrime = (num) => {
   if (num == 2 || num == 3) return true;
   if (num <= 1 || num % 2 == 0 || num % 3 == 0) return false;
   for (let i = 5; i * i <= num; i += 6)
@@ -19,7 +19,7 @@ let isPrime = (num) => {
   return true;
 };
 
-let pushPrime = (primeFn, str) => {
+const pushPrime = (primeFn, str) => {
   for (let i = 0; i < str.length; i++) {
     if (primeFn(i)) {
       primes.push(str[i]);
