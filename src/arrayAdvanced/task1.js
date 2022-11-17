@@ -1,9 +1,13 @@
 let fn = (arrObj, obj) => {
   let el;
   for (el of arrObj) {
-    el.id === obj.id ? arrObj.splice(arrObj.indexOf(el), 1, obj) : 0;
+    if (el.id === obj.id) {
+      arrObj.splice(arrObj.indexOf(el), 1, obj);
+    }
   }
-  arrObj.includes(obj) ? 0 : arrObj.push(obj);
+  if (!arrObj.includes(obj)) {
+    arrObj.push(obj);
+  }
   console.log(arrObj);
 };
 
