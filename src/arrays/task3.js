@@ -1,7 +1,5 @@
 let fn = (arr) => {
-  arr.sort((a, b) => {
-    return a - b;
-  });
+  arr.sort();
   console.log(arr[0]);
 };
 
