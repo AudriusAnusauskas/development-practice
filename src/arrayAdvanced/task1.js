@@ -1,22 +1,24 @@
-let fn = (arrObj, obj) => {
-  let el;
-  for (el of arrObj) {
-    if (el.id === obj.id) {
-      arrObj.splice(arrObj.indexOf(el), 1, obj);
+const fn = (arrObj, obj) => {
+  let newArr = [];
+
+  arrObj.map((e) => {
+    if (e.id === obj.id) {
+      e = obj;
     }
+    newArr.push(e);
+  });
+  if (!newArr.includes(obj)) {
+    newArr.push(obj);
   }
-  if (!arrObj.includes(obj)) {
-    arrObj.push(obj);
-  }
-  console.log(arrObj);
+  return newArr;
 };
 
-let arr = [
+const arr = [
   { id: 4, name: "Lecturer" },
   { id: 3, title: "devMentor" },
   { id: 5 },
 ];
 
-let object = { id: 3 };
+const object = { id: 3 };
 
-fn(arr, object);
+console.log(fn(arr, object));
