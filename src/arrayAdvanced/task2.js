@@ -1,13 +1,18 @@
-let fn = (arrObj, arrIds) => {
-  for (let j = 0; j < arrIds.length; j++) {
-    for (let i = 0; i < arrObj.length; i++) {
-      if (arrIds[j] === arrObj[i].id) {
-        arrObj.splice(arrObj.indexOf(arrObj[i]), 1);
-      }
-    }
-  }
-  console.log(arrObj);
-};
+// let fn = (arrObj, arrIds) => {
+//   let res;
+//   res = arrObj.filter((e) => {
+//     for (let i = 0; i < arrIds.length; i++) {
+
+//       if (e.id == arrIds[i]) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   });
+//   return res;
+// };
+
+let fn = (arrObj, arrIds) => arrObj.filter((e) => !arrIds.includes(e.id));
 
 let objectArray = [
   { id: 4, name: "Lecturer" },
@@ -17,4 +22,4 @@ let objectArray = [
 
 let idsArray = [1, 7, 3, 2, 10, 4];
 
-fn(objectArray, idsArray);
+console.log(fn(objectArray, idsArray));
