@@ -1,9 +1,10 @@
 let arr = [];
 
 let str = "devMentor - path to the developer career";
-
 for (let i = 0; i < str.length; i++) {
-  i % 2 === 0 ? arr.push(str[i]) : 0;
+  if (i % 2 === 0) {
+    arr.push(str[i]);
+  }
 }
 
 console.log(arr);
