@@ -1,5 +1,5 @@
-let fn = (objArr) => {
-  let newArr = [];
+const fn = (objArr) => {
+  const newArr = [];
   objArr.forEach((el) => {
     if (el.age >= 18) {
       newArr.push(el.name);
