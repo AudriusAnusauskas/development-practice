@@ -1,21 +1,16 @@
 const fn = (arrObj, obj) => {
-  let newArr = [];
+  const newArr = arrObj.map((e) => (e.id !== obj.id ? e : obj));
 
-  arrObj.map((e) => {
-    if (e.id === obj.id) {
-      e = obj;
-    }
-    newArr.push(e);
-  });
   if (!newArr.includes(obj)) {
     newArr.push(obj);
   }
+
   return newArr;
 };
 
 const arr = [
   { id: 4, name: "Lecturer" },
-  { id: 3, title: "devMentor" },
+  { id: 36, title: "devMentor" },
   { id: 5 },
 ];
 
