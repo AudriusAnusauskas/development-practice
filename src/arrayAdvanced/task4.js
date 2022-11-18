@@ -17,17 +17,14 @@ const peopleArr = [
 
 // fn(peopleArr);
 
-// googled the algorythm, adapted to my solution
-
 const fn2 = (objArr) => {
   return objArr.reduce((accumulator, currentValue) => {
     const key = currentValue.name;
-    if (!accumulator[key]) {
-      accumulator[key] = 0;
-    }
-    accumulator[key]++;
+
+    accumulator[key] = (accumulator[key] ?? 0) + 1;
+
     return accumulator;
   }, {});
 };
 
-console.log(fn2(peopleArr)); // 0
+console.log(fn2(peopleArr));
